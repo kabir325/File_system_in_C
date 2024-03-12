@@ -1,6 +1,3 @@
-##FINAL
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,6 +17,7 @@ struct Metadata {
     char modification_date[20];
     char content[MAX_CONTENT_LENGTH];
 };
+
 struct Directory{
     int files;
     int folders;
@@ -56,8 +54,6 @@ struct Directory* createDirectory(char name[MAX_NAME_LENGTH], struct Directory* 
     currentDir->next[currentDir->folders++] = newDir;
     return newDir;
 }
-
-
 
 void createFile(char name[MAX_NAME_LENGTH], int size, struct Directory *currentDir, char content[MAX_CONTENT_LENGTH]) {
     if (currentDir->files < MAX_NO_OF_FILES) {
@@ -106,7 +102,6 @@ struct Directory* changeDirectory(struct Directory* currentDir) {
     printf("Directory not found.\n");
     return currentDir;
 }
-
 
 void viewCurrentDirectory(struct Directory* currentDir) {
     printf("Files in the current directory:\n");
@@ -193,7 +188,6 @@ void displayDirectoryMetadata(struct Directory *directory) {
     printf("Number of Subdirectories: %d\n", directory->folders);
     printf("\n");
 }
-
 
 int main() {
     struct Directory *mainDir = Create();
@@ -285,3 +279,4 @@ int main() {
     }
   return 0;
 }
+
