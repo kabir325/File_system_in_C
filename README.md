@@ -1,9 +1,8 @@
 # File_system_in_C
 
-This is a sort of simulation of a file explorer using tree data structure.
+This is a terminal based simulation of a file explorer using tree data structure.
 
-The tree structure used is a multilevel tree which has option to treverse up and down both using pointers.
-
+## Structure Defination
 Metadata structure represents a file wich has a name, path, content and other details about it.
 ```
 struct Metadata {
@@ -15,6 +14,7 @@ struct Metadata {
     char content[MAX_CONTENT_LENGTH];
 };
 ```
+
 
 Directory structure represents a Folder which has the 
 ```
@@ -29,6 +29,19 @@ struct Directory{
     struct Directory *next[MAX_NO_OF_FOLDERS];
 };
 ```
+
+## Functions Implemented
+- struct Directory *Create()
+- struct Directory* createDirectory()
+- void createFile()
+- struct Directory* changeDirectory()
+- void viewCurrentDirectory()
+- void deleteDirectory()
+- void deleteFile()
+- void display_Directory()
+- void displayMetadata()
+- void displayDirectoryMetadata()
+
 
 ## Constraints
 - #define MAX_NAME_LENGTH 20
