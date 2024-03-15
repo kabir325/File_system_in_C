@@ -30,7 +30,7 @@ struct Directory{
 };
 ```
 
-##Constraints
+## Constraints
 - #define MAX_NAME_LENGTH 20
 - MAX_PATH_LENGTH 500
 - MAX_NO_OF_FOLDERS 20
